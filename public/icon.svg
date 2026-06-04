@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Rounded Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bg-grad)" />
+
+  <!-- Outer Glow Ring -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#accent-grad)" stroke-width="4" stroke-opacity="0.25" />
+
+  <!-- Stylized Flow Globe / Grid -->
+  <g opacity="0.15">
+    <circle cx="256" cy="256" r="180" fill="none" stroke="#ffffff" stroke-width="2" />
+    <ellipse cx="256" cy="256" rx="180" ry="80" fill="none" stroke="#ffffff" stroke-width="2" />
+    <ellipse cx="256" cy="256" rx="80" ry="180" fill="none" stroke="#ffffff" stroke-width="2" />
+    <line x1="76" y1="256" x2="436" y2="256" stroke="#ffffff" stroke-width="2" />
+    <line x1="256" y1="76" x2="256" y2="436" stroke="#ffffff" stroke-width="2" />
+  </g>
+
+  <!-- Flight and Train Trails Arc -->
+  <path d="M120 380 C 180 220, 320 220, 400 160" fill="none" stroke="url(#gold-grad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="16 10" />
+  <path d="M100 320 C 160 160, 340 160, 420 240" fill="none" stroke="url(#accent-grad)" stroke-width="6" stroke-linecap="round" />
+
+  <!-- Main Map Pin Icon -->
+  <g transform="translate(196, 120)">
+    <!-- Pin shadow -->
+    <ellipse cx="60" cy="190" rx="35" ry="10" fill="#000000" opacity="0.4" />
+    
+    <!-- Pin body -->
+    <path d="M60 0 C 26.8 0, 0 26.8, 0 60 C 0 105, 60 180, 60 180 C 60 180, 120 105, 120 60 C 120 26.8, 93.2 0, 60 0 Z" fill="url(#accent-grad)" />
+    
+    <!-- Pin inner circle with airplane -->
+    <circle cx="60" cy="60" r="32" fill="#ffffff" />
+    <path d="M60 38 L65 52 L80 50 L81 55 L65 57 L65 70 L72 75 L72 79 L60 76 L48 79 L48 75 L55 70 L55 57 L39 55 L40 50 L55 52 Z" fill="#0f172a" />
+  </g>
+  
+  <!-- Subtle typography inside icon for standard branding -->
+  <text x="256" y="445" font-family="'Space Grotesk', system-ui, sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="4" text-anchor="middle">TRIPFLOW</text>
+</svg>

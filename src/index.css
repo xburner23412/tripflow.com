@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Water Glass / Glassmorphism Utility styles */
+.glass-panel {
+  background: rgba(10, 31, 23, 0.45); /* Elegant translucent 墨绿色 (Deep Forest Jade Green) */
+  backdrop-filter: blur(24px) saturate(210%);
+  -webkit-backdrop-filter: blur(24px) saturate(210%);
+  border: 1px solid rgba(16, 185, 129, 0.2); /* Translucent bright Emerald frame */
+  box-shadow: 
+    0 10px 35px -5px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 18px 0 rgba(16, 185, 129, 0.12); /* Subtle internal green water glow */
+}
+
+.glass-panel-dark {
+  background: rgba(4, 20, 15, 0.7);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  box-shadow: 
+    0 15px 35px -5px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-pill {
+  background: rgba(16, 185, 129, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.glass-input {
+  background: rgba(10, 25, 20, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  background: rgba(10, 35, 25, 0.85);
+  border-color: rgba(52, 211, 153, 0.65);
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.25);
+}
+
+/* Animated fluid floating glow blobs */
+@keyframes morph-blob-1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(30px, -50px) scale(1.15) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) scale(0.9) rotate(240deg); }
+}
+
+@keyframes morph-blob-2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  40% { transform: translate(-40px, 40px) scale(1.1) rotate(-90deg); }
+  70% { transform: translate(30px, -20px) scale(0.85) rotate(180deg); }
+}
+
+.animate-blob-1 {
+  animation: morph-blob-1 25s infinite ease-in-out;
+}
+
+.animate-blob-2 {
+  animation: morph-blob-2 30s infinite ease-in-out;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.55);
+}
+

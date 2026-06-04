@@ -1,0 +1,6 @@
+{
+  "name": "TripFlow",
+  "description": "An interactive, elegant summer travel dashboard for organizing flights, trains, hotel bookings, and budgets across Helsinki, Lisbon, Porto, Prague, Vienna, Budapest, and Stockholm.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

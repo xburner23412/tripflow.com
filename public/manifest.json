@@ -1,0 +1,18 @@
+{
+  "short_name": "TripFlow",
+  "name": "TripFlow Europe Travel",
+  "description": "A personal Europe travel itinerary planner with timeline, budget, checklist, and map views.",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#10b981",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}
